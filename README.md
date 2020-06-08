@@ -1,68 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Stash es un servicio de almacenamiento de objetos que se puede gestionar a través de
+una app donde el usuario puede ver y organizar sus objetos guardados, así como compartirlos
+con sus contactos en lista de amigos.
 
-## Available Scripts
+El servicio comienza cuando el usuario solicita el "pickup" de la lista de cosas que desea guardar
+al hacerlo, se le solicita que envíe fotos y medidas aproximadas de los objetos en cuestión, así
+como añadir información sobre si su contenido es frágil o requiere atenciones especiales. 
+Cabe mencionar que es necesario contar con un registro en la app para completar este proceso.
 
-In the project directory, you can run:
+Con base en esto, se realiza una cotización que contempla:
+    -Cantidad de objetos (Administración de los mismos)
+    -Flete (tipo de flete para "pickup" más un porcentaje en caso de solicitar la entrega de estos objetos por separado)
+    -Tiempo de resguardo (Determinada por el usuario)
 
-### `npm start`
+La cotización es enviada por correo y una alerta indica al usuario que ya puede pagar su servicio para
+completar la solicitud de "pickup" desde la app.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Sus objetos serán transportados a una bodega segura, donde sus pertenencias se catalogarán, etiquetarán, empaquetarán y se 
+resguardarán hasta que el usuario solicite la entrega de éstos. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Una vez realizado el pago, el usuario puede gestionar sus objetos de manera digital organizándolos
+en objetos públicos y privados.
+Así mismo, podrá cancelar el pickup antes de que sea realizado. Una vez realizado el pickup podrá recuperar
+sus objetos independientemente del "tiempo de resguardo" solicitado inicialmente a través de una solicitud
+de entrega.
 
-### `npm test`
+Aquellos objetos que permanezcan privados sólo podrán ser vistos desde la app por el usuario, mientras que los que
+sean catalogados como públicos, pueden ser vistos por los contactos en la lista de amigos del usuario.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Los amigos del usuario y el usuario, al ver los objetos resguardados uno del otro, pueden hacer solicitudes de préstamo.
+Una notificación indicará al usuario sobre dichas solicitudes que podrá aceptar o rechazar.
 
-### `npm run build`
+En caso de aceptarlas, se comenzará una solicitud de entrega para el usuario o cualquiera de sus contactos.
+El costo de estas entregas ya va considerado desde la cotización inicial, así que el proceso es más sencillo y no 
+requiere un pago.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Contemplando que el servicio puede ser un sistema de resguardo de propiedades que se presta a utilizarse por largos
+periodos de tiempo, se ofrece también la oportunidad de pagar una suscripción mensual, trimestral, o anual que permita
+al usuario solicitar una cantidad determinada de pickups, y entregas al mes (dentro de un área determinada) 
+sin un costo adicional a dicha suscripción.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
